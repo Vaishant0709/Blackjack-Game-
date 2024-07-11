@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Jack Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="blackjack.css" />
+  <script src="balckjack.js"></script>
+</head>
+
+<body>
+  <h1>Black Jack Game</h1>
+  <button id="modal-open-button" class="button-48">Rules</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Black Jack Rules</div>
+      <button id="modal-close-button" class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      Blackjack (or 21) is a card game where you compete against the dealer to get a hand closest to 21 points, without going over.
+      <ul class="main">
+        <li>Card Values:
+          <ul class="sub">
+            <li>
+              Number cards (2-10): Face value
+            </li>
+            <li>
+              Face cards (Jack, Queen, King): 10 points
+            </li>
+            <li>
+              Ace: 1 point or 11 points (if over 21 then can be used as 1)
+            </li>
+          </ul>
+        </li>
+        <li>
+          Goal: Get a hand total closer to 21 than the dealer without exceeding 21 (busting).
+        </li>
+        <li>
+          Gameplay:
+          <ul class="sub">
+            <li>
+              Player receives two cards face up.
+            </li>
+            <li>
+              Dealer receives two cards, one face up and one face down (the "hole card").
+            </li>
+            <li>
+              Player decides to "hit" (get another card) or "stand" (stay with current hand).
+            </li>
+            <li>
+              Player keeps hitting or standing until satisfied or busts.
+            </li>
+            <li>
+              Dealer follows predetermined rules based on their hand.
+            </li>
+            <li>
+              The hand closer to 21 wins!
+            </li>
+          </ul>
+        </li>
+        <li>Winning:
+          <ul class="sub">
+            <li>
+              Blackjack (natural): Player gets an Ace and a 10-value card for a starting total of 21.
+            </li>
+            <li>
+              Regular win: Player's hand is closer to 21 than the dealer's without busting.
+            </li>
+            <li>
+              Push (tie): Player and dealer have the same hand total.
+            </li>
+            <li>
+              Loss: Player busts or dealer has a higher hand without busting.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div  id="overlay"></div>
+
+  <h2>DEALER : <span id="dealer-sum"></span></h2>
+  <div id="dealer-card">
+    <img id="hidden" src="./cards/BACK.png" alt="" />
+
+  </div>
+
+  <h2>YOU: <span id="your-sum"></span></h2>
+  <div id="your-card">
+
+  </div>
+  <br />
+  <button id="hit" class="button-48"><span class="text">Hit</span></button>
+  <button id="stay" class="button-48"><span class="text">Stay</span></button>
+  <br>
+  <button id="reset" class="button-48"><span class="text">Reset</span></button>
+
+  <p id="results"></p>
+</body>
+
+</html>

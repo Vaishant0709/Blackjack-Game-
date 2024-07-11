@@ -1,0 +1,165 @@
+body{
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: 1920px;
+  text-align: center;
+}
+h2{
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  font-size: 30px;
+}
+#dealer-card img{
+  height: 175px;
+  width: 125px;
+  margin: 3px;
+}
+#your-card img{
+  height: 175px;
+  width: 125px;
+  margin: 3px;
+}
+#reset{
+  margin-top: 10px;
+}
+.rules{
+  text-align: left;
+}
+
+/*modal*/
+.modal{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;
+  border:1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: rgb(248, 85, 85);
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active{
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.modal-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.modal-header .title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body{
+  padding: 10px 15px;
+}
+
+#overlay{
+  position: fixed;
+  opacity:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  pointer-events: none;
+}
+#overlay.active{
+  pointer-events: all;
+  opacity: 1;
+}
+
+.main{
+  padding-bottom: 3px;
+  list-style: none;
+  text-align: left;
+}
+.main li{
+  margin: 3px;
+}
+.sub{
+  text-align: left;
+}
+
+
+
+/* CSS */
+/*BUTTONS*/
+.button-48 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border-radius: 8px;
+  width: 120px;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
